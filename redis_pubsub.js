@@ -7,3 +7,10 @@
 //Jika kita mengirim data ke Channel, tapi belum ada Subscriber nya, secara otomatis datanya akan hilang, oleh karena itu ada baiknya di awal kita menjalankan Subscriber nya terlebih dahulu
 subscribe chat notification //sesi 1 subscribe ke chatt & notification
 subscribe chat //sesi lainnya hanya subscribe ke chat
+
+//Publisher
+//Setelah menjalankan Subscriber, kita bisa membuat Publisher untuk mengirim data ke channel
+pubsub channel //show channel apa saja yang jalan, chat & notification
+publish chat "good morning!" //publish ke channel chatt, pada 2 sesi yang berjalan tadi akan ada message publishan diterima
+publish notification "order received!"
+unsubscribe chat //pada sesi yang subscribe chat tadi juga bisa unsubscribe, setelah itu tidak akan menerima publishan lagi
